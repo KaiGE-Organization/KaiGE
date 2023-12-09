@@ -1,14 +1,14 @@
 use std::cell::{RefCell, RefMut};
 use std::any::Any;
 
-#[derive(Clone)] // Add this line to derive the Clone trait for Entity
+#[derive(Clone)]
 pub struct Entity {
    pub id: usize,
 }
 
 pub struct Component {
     pub id: usize,
-    // Add your actual component fields here
+    // Add actual component fields here
 }
 
 impl Entity {
@@ -16,9 +16,9 @@ impl Entity {
         Entity { id }
     }
 
-    fn add_component(&mut self, component_id: usize) {
+    fn add_component(&mut self, _component_id: usize) {
         // Logic to add component to entity
-        // You need to implement this based on your requirements
+        //TODO
     }
 }
 

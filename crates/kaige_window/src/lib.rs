@@ -19,7 +19,7 @@ impl App {
     }
 
     pub fn run(self) {
-        let window = WindowBuilder::new().build(&self.event_loop).unwrap();
+        let _window = WindowBuilder::new().build(&self.event_loop).unwrap();
 
         self.event_loop.run(move |event, _, control_flow| {
             *control_flow = ControlFlow::Wait;
