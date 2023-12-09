@@ -1,0 +1,7 @@
+{
+    "rust-analyzer.linkedProjects": [
+        "./kaiGE-testing/Cargo.toml",
+        "./kaiGE-testing/Cargo.toml"
+    ],
+    "rust-analyzer.showUnlinkedFileNotification": false
+}
