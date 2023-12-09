@@ -1,3 +1,3 @@
 # kaiGE
 
-- [ ] [apecs](https://crates.io/crates/apecs) is the ECS that I will fork and use.
+- [ ] ECS doesn't integrate correctly, fix it
