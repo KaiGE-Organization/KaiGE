@@ -1,64 +1,9 @@
 use kaige::custom_errors::*;
 use kaige::*;
 
-#[derive(Debug)]
-struct Position {
-    x: f32,
-    y: f32,
-}
-
-#[derive(Debug)]
-struct Velocity {
-    x: f32,
-    y: f32,
-}
-
-#[derive(Debug)]
-struct Info {
-    username: String,
-}
-
 fn main() {
     // Create an instance of the App struct
     let app = App::new();
-    app.run();
-    
-    // Create a new world
-    let mut world = World::default();
-
-    // Add entities to the world
-    world.push((
-        Position { x: 0.0, y: 0.0 },
-        Velocity { x: 1.0, y: 1.0 },
-        Info {
-            username: "tyler".to_string(),
-        },
-    ));
-    world.push((
-        Position { x: 5.0, y: 5.0 },
-        Velocity { x: -1.0, y: -1.0 },
-        Info {
-            username: "ashley".to_string(),
-        },
-    ));
-    world.push((
-        Position { x: 10.0, y: 29.0 },
-        Velocity { x: 0.0, y: 0.0 },
-        Info {
-            username: "brody".to_string(),
-        },
-    ));
-
-    // Search for all entities with values
-    let mut query = <(&Info, &Position, &Velocity)>::query();
-
-    // Iterate over each entity
-    for (info, position, velocity) in query.iter(&world) {
-        println!(
-            "Username: {:?}, Position: {:?}, Velocity: {:?}",
-            info, position, velocity
-        );
-    }
 
     let result = simulate_error();
 
@@ -69,6 +14,24 @@ fn main() {
             _ => println!("An unknown error occurred"),
         },
     }
+
+    let mut world = World::new();
+    let entity = world.new_entity();
+    world.add_component(entity.clone(), 42);
+
+    println!("Entity ID: {}", entity.id);
+    println!("Component ID: {}", world.components[entity.id].id);
+    println!(
+        "Component Value: {}",
+        world.borrow_component_vec_mut::<i32>().unwrap()[entity.id].unwrap()
+    );
+
+    if let Some(mut vec_ref) = world.borrow_component_vec_mut::<i32>() {
+        // Do something with the mutable reference to the component vector
+        vec_ref[entity.id] = Some(84);
+    }
+
+    app.run();
 }
 
 // Simulate an error
