@@ -1,53 +1,66 @@
 use kaige::custom_errors::*;
+use kaige::*;
+
+#[derive(Debug)]
+struct Position {
+    x: f32,
+    y: f32,
+}
+
+#[derive(Debug)]
+struct Velocity {
+    x: f32,
+    y: f32,
+}
+
+#[derive(Debug)]
+struct Info {
+    username: String,
+}
 
 fn main() {
-    // Simulating an error occurrence using the library's error type
+    let mut world = World::default();
+
+    // Add entities to the world
+    world.push((
+        Position { x: 0.0, y: 0.0 },
+        Velocity { x: 1.0, y: 1.0 },
+        Info { username: "tyler".to_string() }, 
+    ));
+    world.push((
+        Position { x: 5.0, y: 5.0 },
+        Velocity { x: -1.0, y: -1.0 },
+        Info { username: "ashley".to_string() }, 
+    ));
+    world.push((
+        Position { x: 10.0, y: 29.0},
+        Velocity { x: 0.0, y: 0.0},
+        Info { username: "brody".to_string() }, 
+    ));
+
+    // Search for all entities with values
+    let mut query = <(&Info, &Position, &Velocity)>::query();
+
+    // Iterate over each entity
+    for (info, position, velocity) in query.iter(&world) {
+        println!("Username: {:?}, Position: {:?}, Velocity: {:?}", info, position, velocity);
+    }
+
     let result = simulate_error();
     
     match result {
         Ok(_) => println!("Operation was successful!"),
         Err(err) => {
-            // Handling the kaiGE library error
             match err {
                 Errors::TestError => println!("Encountered a kaiGE test error!"),
+                _ => println!("An unknown error occurred"),
             }
         }
     }
-
-    testing_ecs();
 }
 
-// Function that may return an error using the kaiGE library error type
+// Simulate an error
 fn simulate_error() -> Result<(), Errors> {
-    // For demonstration purposes, let's return a test error
     Err(Errors::TestError)
 }
 
-fn testing_ecs() {
-    let mut world = World::new();
-    let icarus_entity = world.new_entity();
-    world.add_component_to_entity(icarus_entity, Name("Icarus"));
-    world.add_component_to_entity(icarus_entity, Health(-10));
-
-    let prometheus_entity = world.new_entity();
-    world.add_component_to_entity(prometheus_entity, Name("Prometheus"));
-    world.add_component_to_entity(prometheus_entity, Health(100));
-
-    let zeus_entity = world.new_entity();
-    world.add_component_to_entity(zeus_entity, Name("Zeus"));
-
-    let mut healths = world.borrow_component_vec_mut::<Health>().unwrap();
-    let mut names = world.borrow_component_vec_mut::<Name>().unwrap();
-    let zip = healths.iter_mut().zip(names.iter_mut());
-    let iter = zip.filter_map(|(health, name)| Some((health.as_mut()?, name.as_mut()?)));
-
-    for (health, name) in iter {
-        if health.0 < 0 {
-            println!("{} has perished", name.0)
-        }
-
-        if name.0 == "Perseus" && health.0 <= 0 {
-            *health = Health(100);
-        }
-    }
-}
