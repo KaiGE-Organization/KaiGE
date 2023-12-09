@@ -1,11 +1,9 @@
 [package]
-name = "kaige"
+name = "kaige_window"
 version = "0.1.0"
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-kaige_ecs = { path = "crates/kaige_ecs" }
-kaige_window = { path = "crates/kaige_window"}
-thiserror = "1.0.50"
+winit = "0.25.0"
