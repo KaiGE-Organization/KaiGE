@@ -1,37 +1,35 @@
 use kaige::custom_errors::*;
 use kaige::*;
 
+#[derive(Debug, PartialEq)]
+struct Health(i32);
+
+#[derive(Debug, PartialEq)]
+struct Name(&'static str);
+
+
 fn main() {
-    // Create an instance of the App struct
-    let app = App::new();
-
-    let result = simulate_error();
-
-    match result {
-        Ok(_) => println!("Operation was successful!"),
-        Err(err) => match err {
-            Errors::TestError => println!("Encountered a kaiGE test error!"),
-            _ => println!("An unknown error occurred"),
-        },
-    }
-
+    // Create a new world
     let mut world = World::new();
+
+    // Create a new entity
     let entity = world.new_entity();
-    world.add_component(entity.clone(), 42);
+    println!("Created entity: {:?}", entity);
 
-    println!("Entity ID: {}", entity.id);
-    println!("Component ID: {}", world.components[entity.id].id);
-    println!(
-        "Component Value: {}",
-        world.borrow_component_vec_mut::<i32>().unwrap()[entity.id].unwrap()
-    );
+    // Add a Health component to the entity
+    let health = Health(100);
+    world.add_component_to_entity(&entity, health);
 
-    if let Some(mut vec_ref) = world.borrow_component_vec_mut::<i32>() {
-        // Do something with the mutable reference to the component vector
-        vec_ref[entity.id] = Some(84);
-    }
-
-    app.run();
+    // Access the Health component for the entity
+    if let Some(component_vec) = world.borrow_component_vec_mut::<Health>() {
+        if let Some(health_component) = component_vec[entity.id].as_ref() {
+            println!("Health component for entity {:?}: {:?}", entity, health_component);
+        } else {
+            println!("Entity {:?} does not have a Health component.", entity);
+        }
+    } else {
+        println!("No Health components found in the world.");
+    };
 }
 
 // Simulate an error
