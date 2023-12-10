@@ -35,13 +35,15 @@ KaiGE is a modern and versatile game engine written in Rust, designed to empower
 
 ## Getting Started
 
+<del>
 To get started with KaiGE, follow these steps:
 
 1. **Install Rust:** Make sure you have Rust installed on your machine. You can install it by following the instructions on [https://www.rust-lang.org/](https://www.rust-lang.org/).
 
 2. **Create a New Project:** Use the KaiGE template to start a new project. first install kaige-cli by `cargo install kaige-cli` and then run the command `kaige new [your-projects-name]`.
 
-3. **Explore the Documentation:** Check out the official [documentation](https://kaige.rs/docs) for in-depth guides, tutorials, and API references to help you navigate through KaiGE's features.
+3. **Explore the Documentation:** Check out the official [documentation](https://kaige.rs/docs) for in-depth guides, tutorials, and API references to help you navigate through KaiGE's features. ~~
+</del>
 
 ## Contributing
 
