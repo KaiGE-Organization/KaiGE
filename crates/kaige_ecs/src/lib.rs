@@ -3,7 +3,7 @@ use std::any::Any;
 
 #[derive(Clone)]
 pub struct Entity {
-   pub id: usize,
+    pub id: usize,
 }
 
 pub struct Component {
@@ -16,10 +16,27 @@ impl Entity {
         Entity { id }
     }
 
-    fn add_component(&mut self, _component_id: usize) {
+    fn add_component(&mut self, component_id: usize) {
         // Logic to add component to entity
-        //TODO
+        self.id = component_id; // For demonstration purposes, store the component ID in the entity
     }
+
+    fn get_component<T: 'static>(&self) -> Option<&'static T> {
+        // Logic to get component from entity
+        if let Some(component) = get_component_by_id::<T>(self.id) {
+            Some(component)
+        } else {
+            None
+        }
+    }
+}
+
+fn get_component_by_id<T: 'static>(component_id: usize) -> Option<&'staticT> {
+    // Function to retrieve the component from the World's component vectors
+    // You can use the component_id to index into the appropriate vector
+    // and return the component if it exists.
+    // Implement this based on your specific requirements.
+    unimplemented!()
 }
 
 impl Component {
