@@ -1,5 +1,5 @@
 <!-- markdownlint-disable MD033 -->
-# <p style="text-align: center;">KaiGE</p>
+# <p align="center">KaiGE</p>
 
 <p align="center">
   <a href="https://kaige.rs">
