@@ -16,7 +16,7 @@ trait ComponentVec {
     fn push_none(&mut self);
 }
 
-impl<T: 'static> ComponentVec for RefCell<Vec<Option<T>>> {
+impl<T: 'static> ComponentVec for RefCell<Vec<Option<Box<T>>>> {
     fn as_any(&self) -> &dyn std::any::Any {
         self as &dyn std::any::Any
     }
@@ -59,17 +59,16 @@ impl World {
     ) {
         // Search for any existing ComponentVecs that match the type of the component being added.
         for component_vec in self.component_vecs.iter_mut() {
-            if let Some(component_vec) = component_vec
-                .as_any_mut()
-                .downcast_mut::<RefCell<Vec<Option<ComponentType>>>>()
+            if let Some(component_vec) =
+                component_vec.as_any_mut().downcast_mut::<RefCell<Vec<Option<Box<ComponentType>>>>>()
             {
-                component_vec.borrow_mut()[entity.id] = Some(component);
+                component_vec.borrow_mut()[entity.id] = Some(Box::new(component));
                 return;
             }
         }
 
         // No matching component storage exists yet, so we have to make one.
-        let mut new_component_vec: Vec<Option<ComponentType>> =
+        let mut new_component_vec: Vec<Option<Box<ComponentType>>> =
             Vec::with_capacity(self.entities_count);
 
         // All existing entities don't have this component, so we give them `None`
@@ -78,18 +77,17 @@ impl World {
         }
 
         // Give this Entity the Component.
-        new_component_vec[entity.id] = Some(component);
+        new_component_vec[entity.id] = Some(Box::new(component));
         self.component_vecs
             .push(Box::new(RefCell::new(new_component_vec)));
     }
 
     pub fn borrow_component_vec_mut<ComponentType: 'static>(
         &self,
-    ) -> Option<RefMut<Vec<Option<ComponentType>>>> {
+    ) -> Option<RefMut<Vec<Option<Box<ComponentType>>>>> {
         for component_vec in self.component_vecs.iter() {
-            if let Some(component_vec) = component_vec
-                .as_any()
-                .downcast_ref::<RefCell<Vec<Option<ComponentType>>>>()
+            if let Some(component_vec) =
+                component_vec.as_any().downcast_ref::<RefCell<Vec<Option<Box<ComponentType>>>>>()
             {
                 return Some(component_vec.borrow_mut());
             }
@@ -117,7 +115,7 @@ mod tests {
         world.add_component_to_entity(&entity, health);
 
         let component_vec = world.borrow_component_vec_mut::<Health>().unwrap();
-        assert_eq!(component_vec[entity.id], Some(Health(100)));
+        assert_eq!(component_vec[entity.id], Some(Box::new(Health(100))));
     }
 
     #[test]
@@ -130,10 +128,10 @@ mod tests {
         world.add_component_to_entity(&entity, name);
 
         let health_component_vec = world.borrow_component_vec_mut::<Health>().unwrap();
-        assert_eq!(health_component_vec[entity.id], Some(Health(100)));
+        assert_eq!(health_component_vec[entity.id], Some(Box::new(Health(100))));
 
         let name_component_vec = world.borrow_component_vec_mut::<Name>().unwrap();
-        assert_eq!(name_component_vec[entity.id], Some(Name("John Doe")));
+        assert_eq!(name_component_vec[entity.id], Some(Box::new(Name("John Doe"))));
     }
 
     #[test]
@@ -144,6 +142,6 @@ mod tests {
         world.add_component_to_entity(&entity, name);
 
         let name_component_vec = world.borrow_component_vec_mut::<Name>().unwrap();
-        assert_eq!(name_component_vec[entity.id], Some(Name("John Doe")));
+        assert_eq!(name_component_vec[entity.id], Some(Box::new(Name("John Doe"))));
     }
 }
