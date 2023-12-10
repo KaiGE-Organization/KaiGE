@@ -36,7 +36,7 @@ Contributions to KaiGE are welcome! Whether you want to report a bug, request a 
 
 ## License
 
-KaiGE is licensed under the [GNU General Public License](LICENSE.md).
+KaiGE is licensed under the [GNU General Public License](LICENSE).
 
 ---
 
