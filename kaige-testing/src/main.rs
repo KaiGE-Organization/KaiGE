@@ -32,7 +32,7 @@ fn main() {
     };
 }
 
-// Simulate an error
-fn simulate_error() -> Result<(), Errors> {
-    Err(Errors::TestError)
-}
+// // Simulate an error
+// fn simulate_error() -> Result<(), Errors> {
+//     Err(Errors::TestError)
+// }
