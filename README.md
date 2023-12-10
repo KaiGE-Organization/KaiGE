@@ -1,7 +1,9 @@
 # KaiGE - Rust Game Engine
-
-![KaiGE Logo](path/to/kaiGE-logo.png)
-
+<p align="center">
+  <a href="https://kaige.rs">
+    <img src="KaiGElogo.svg" width="400" alt="KaiGE logo">
+  </a>
+</p>
 KaiGE is a modern and versatile game engine written in Rust, designed to empower developers in creating high-performance and cross-platform games. With a focus on simplicity, flexibility, and performance, KaiGE aims to be the go-to choice for game developers who want to harness the power of Rust in their game development journey.
 
 ## Features
