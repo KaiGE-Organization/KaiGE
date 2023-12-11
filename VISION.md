@@ -2,6 +2,21 @@
 
 KaiGE aspires to establish itself as a premier Rust game engine, distinguished by a rich feature set that resonates with the preferences and requirements of Rust developers.
 
+## Table Of Contents
+
+- [Core Features](##core-features)
+  - [Ease of Use](###ease-of-use)
+  - [Performance](###performance)
+  - [Flexibility](###flexibility)
+  - [Modern Design](###modern-design)
+ 
+- [Additional Differentiators](##additional-differentiators)
+  - [Unique Features](###unique-features)
+  - [Genre-specific Focus](###genre-specific-focus)
+  - [Exceptional Community Support](###exceptional-community-support)
+  - [Active Development and Continuous Improvement](###active-development-and-continuous-improvement)
+  - [Physics, Collision, and Others](###TODO)
+
 ## Core Features:
 
 ### Ease of Use:
@@ -89,3 +104,12 @@ KaiGE aspires to establish itself as a premier Rust game engine, distinguished b
   
 - **Open Roadmap:**
   - Maintain transparency through an open development roadmap, allowing the community to contribute ideas and feedback, shaping the future direction of KaiGE.
+
+### Physics, Collision, and Others
+
+- **Physics Engine:** We will be making an official kaige_physics crate/plugin that wraps [Rapier](https://github.com/dimforge/rapier)https://github.com/dimforge/rapier around our game engine.
+  - We will use Rapier until it is deprecated or doesn't fit with our vision of the engine. At that point, we will fork Rapier or develop our own physics engine.
+ 
+- **Collision:** We will be making an official kaige_collision crate/plugin that wraps [Parry](https://github.com/dimforge/parry)
+  - We will use Parry until it is deprecated or doesn't fit with our vision of the engine. At that point, we will fork Parry or develop our own collision detection.
+ 
