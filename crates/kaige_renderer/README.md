@@ -2,16 +2,16 @@
 
 ## Checklist
 
-1. **Learn Vulkan Basics:**
-    - [ ] Understand Vulkan concepts, such as instances, devices, queues, and command buffers.
-    - [ ] Familiarize yourself with Vulkan's pipeline architecture.
+1. **Learn wgpu Basics:**
+    - [ ] Understand wgpu concepts, such as devices, queues, and command buffers.
+    - [ ] Familiarize yourself with wgpu's pipeline architecture.
 
-2. **Set Up Vulkan:**
-    - [ ] Use a Vulkan SDK to access the Vulkan API.
-    - [ ] Set up a Vulkan context and create an instance.
+2. **Set Up wgpu:**
+    - [ ] Use the [wgpu crate](https://crates.io/crates/wgpu) to access the wgpu API.
+    - [ ] Set up a wgpu instance and adapter.
 
 3. **Window Integration:**
-    - [ ] Integrate Vulkan with a windowing system (e.g., GLFW or SDL) to handle window creation and input.
+    - [ ] Integrate wgpu with a windowing system (e.g., winit) to handle window creation and input.
 
 4. **Surface and Swap Chain:**
     - [ ] Create a surface from the window.
@@ -43,31 +43,27 @@
 
 10. **Optimization:**
      - [ ] Implement frustum culling for 3D objects.
-     - [ ] Explore Vulkan's multithreading capabilities for parallel processing.
+     - [ ] Explore wgpu's multithreading capabilities for parallel processing.
 
 11. **Error Handling and Validation:**
      - [ ] Implement robust error handling and validation checks.
-     - [ ] Utilize Vulkan validation layers during development.
-
-12. **User Interface (Optional):**
-     - [ ] Integrate a user interface system (e.g., Dear ImGui) for debugging purposes.
+     - [ ] Utilize wgpu validation layers during development.
 
 ### Resources
 
-1. **Vulkan Documentation:**
-    - [Vulkan API Documentation](https://www.khronos.org/registry/vulkan/)
+1. **wgpu Documentation:**
+    - [wgpu API Documentation](https://docs.rs/wgpu/)
 
 2. **Tutorials and Examples:**
-    - [Vulkan Tutorial](https://vulkan-tutorial.com/)
-    - [Vulkan Cookbook](https://github.com/PacktPublishing/Vulkan-Cookbook)
+    - [wgpu Examples](https://github.com/gfx-rs/wgpu-rs/tree/master/examples)
 
 3. **Books:**
-    - "Vulkan Programming Guide" by Graham Sellers and John Kessenich
+    - "WebGPU Programming Guide" by David Rousset
 
 4. **GitHub Repositories:**
-    - [Vulkan Samples](https://github.com/KhronosGroup/Vulkan-Samples)
-    - [Vulkan Best Practices](https://github.com/GPUOpen-LibrariesAndSDKs/VulkanSamples)
+    - [wgpu-rs](https://github.com/gfx-rs/wgpu-rs)
+    - [wgpu-hal](https://github.com/gfx-rs/wgpu-hal)
 
 5. **Community and Forums:**
-    - [Vulkan Subreddit](https://www.reddit.com/r/vulkan/)
-    - [Khronos Vulkan Forum](https://community.khronos.org/c/vulkan/)
+    - [wgpu Discord Server](https://discord.gg/8qAWxha)
+    - [gfx-rs Discourse](https://community.amethyst.rs/c/graphics/gfx-rs/)
