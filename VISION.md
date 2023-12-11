@@ -33,7 +33,7 @@ KaiGE aspires to establish itself as a premier Rust game engine, distinguished b
   
 - **Extensive Plugin Ecosystem:**
   - Cultivate a diverse range of community-developed tools and features through a robust plugin ecosystem.
-  - This means that I need to develop a simple way for people to develop plugins and other things for the engine.
+  - This means I need to develop a simple way for people to build plugins and other things for the engine.
   
 - **Cross-platform Support:**
   - Facilitate game deployment across desktop, web, and mobile platforms, ensuring a broad reach for developed games.
@@ -63,16 +63,13 @@ KaiGE aspires to establish itself as a premier Rust game engine, distinguished b
 - **Real-time Collaboration:**
   - Enable real-time collaboration features, allowing multiple developers to work on the same project simultaneously, fostering teamwork and productivity.
 
- - **CLI Tool To Help Withe The Development Workflow:**
-   - CLI tool to initialize template projects, build your games to each platform, and publish plugins and assets to the asset store.
+ - **CLI Tool To Help With The Development Workflow:**
+   - Use the CLI tool to initialize template projects, build your games for each platform, and publish plugins and assets to the asset store.
   
 ### Genre-specific Focus:
 
-- **FPS Toolkit:**
-  - Offer specialized tools and utilities for developing first-person shooter (FPS), including realistic weapon mechanics, AI behaviors, and level design components.
-  
-- **Simulation Support:**
-  - Cater to simulation game developers with features tailored for realistic physics, dynamic environments, and complex system interactions.
+- Make specific game templates that set movement and basic mechanics for FPS, TPS, Simulation, Racing, and Platformer games.
+- The asset store will host templates as a category of assets.
 
 ### Exceptional Community Support:
 
@@ -84,8 +81,8 @@ KaiGE aspires to establish itself as a premier Rust game engine, distinguished b
 
 ### Active Development and Continuous Improvement:
 
-- **Regular Webinars and Workshops:**
-  - Conduct regular webinars and workshops to update developers on the latest features, best practices, and advanced techniques.
+- **Regular Social Media Updates:**
+  - Make regular development log posts on X (Twitter), Reddit, YouTube, and Github Discussions.
   
 - **Open Roadmap:**
   - Maintain transparency through an open development roadmap, allowing the community to contribute ideas and feedback, shaping the future direction of KaiGE.
