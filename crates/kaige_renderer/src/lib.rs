@@ -1,3 +1,5 @@
+pub use wgpu::*;
+
 pub struct Renderer {
     //TODO
 }
