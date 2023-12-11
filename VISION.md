@@ -33,7 +33,7 @@ KaiGE aspires to establish itself as a premier Rust game engine, distinguished b
   
 - **Extensive Plugin Ecosystem:**
   - Cultivate a diverse range of community-developed tools and features through a robust plugin ecosystem.
-  - This means that I need a simple way o
+  - This means that I need to develop a simple way for people to develop plugins and other things for the engine.
   
 - **Cross-platform Support:**
   - Facilitate game deployment across desktop, web, and mobile platforms, ensuring a broad reach for developed games.
