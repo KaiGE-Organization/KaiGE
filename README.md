@@ -3,7 +3,7 @@
 
 <p align="center">
   <a href="https://kaige.rs">
-    <img src="KaiGElogo.svg" width="400" alt="KaiGE logo">
+    <img src="KaiGElogo.svg" width="1080" alt="KaiGE logo">
   </a>
 </p>
 
