@@ -55,7 +55,8 @@ KaiGE aspires to establish itself as a premier Rust game engine, distinguished b
 
 - **Advanced Editor:**
   - Provide a powerful and user-friendly game development editor with visual scripting, scene management, and debugging features.
-  
+  - UI made with [Azul](https://github.com/fschutt/azul)
+
 - **Procedural Content Generation:**
   - Integrate tools for generating dynamic and procedural game content, empowering developers to create diverse and engaging worlds.
   
