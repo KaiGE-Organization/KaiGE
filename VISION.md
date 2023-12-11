@@ -65,6 +65,9 @@ KaiGE aspires to establish itself as a premier Rust game engine, distinguished b
 
  - **CLI Tool To Help With The Development Workflow:**
    - Use the CLI tool to initialize template projects, build your games for each platform, and publish plugins and assets to the asset store.
+
+ - **VR/AR Support:**
+   -  Optional crate/plugin that has tooling for build a VR or AR application or game.
   
 ### Genre-specific Focus:
 
