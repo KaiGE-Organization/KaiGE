@@ -1,4 +1,7 @@
-// THIS NEEDS TO BE MADE FROM SCRATCH, THIS IS JUST A PLACEHOLDER
+// This will be integrated into the rendering crate, will be deprecated.
+// Leaving this here for now just in case I need to use it for something.
+// This is just a placeholder for now, will be removed later.
+// TODO: Remove this file.
 
 
 use winit::{
