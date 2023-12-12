@@ -1,11 +1,24 @@
 [package]
 name = "kaige"
-version = "0.1.0"
+version = "0.0.1"
 edition = "2021"
+readme = "README.md"
+authors = ["Kaige Organization <tylerdarincritchlow@gmail.com>"]
+description = "A game engine written in Rust"
+license = "GNU GPLv3"
+repository = "https://github.com/kaige-organization/kaige"
+homepage = "kaige.rs"
+documentation = "kaige.rs/docs"
+keywords = ["game", "engine", "rust", "kaige"]
+categories = ["game-engines", "game-development", "rust"]
+exclude = ["target", "crates/kaige_ecs/target", "crates/kaige_window/target", "crates/kaige_window/kaige_window/target"]
+
+
+
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-kaige_ecs = { path = "crates/kaige_ecs" }
-kaige_window = { path = "crates/kaige_window"}
+kaige_ecs = { path = "crates/kaige_ecs", version = "*"}
+kaige_window = { path = "crates/kaige_window", version = "*"}
 thiserror = "1.0.50"
