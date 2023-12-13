@@ -199,7 +199,7 @@ pub mod serialize;
 
 // re-export most common types into the root
 #[cfg(feature = "codegen")]
-pub use legion_codegen::system;
+pub use kaige_codegen::system;
 
 #[cfg(feature = "serialize")]
 pub use crate::serialize::Registry;

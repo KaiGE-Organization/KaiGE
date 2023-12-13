@@ -18,7 +18,7 @@ use syn::{
 /// By default, the wrapped function is called once each time the system runs.
 ///
 /// ```ignore
-/// # use legion_codegen::system;
+/// # use kaige_codegen::system;
 /// # use legion::Schedule;
 /// #[system]
 /// fn hello_world() {
@@ -34,7 +34,7 @@ use syn::{
 /// the `#[resource]` attribute.
 ///
 /// ```ignore
-/// # use legion_codegen::system;
+/// # use kaige_codegen::system;
 /// # use legion::Schedule;
 /// # struct Person { name: String }
 /// #[system]
@@ -46,7 +46,7 @@ use syn::{
 /// Systems can also request a world or command buffer.
 ///
 /// ```ignore
-/// # use legion_codegen::system;
+/// # use kaige_codegen::system;
 /// # use legion::{Schedule, systems::CommandBuffer, world::SubWorld};
 /// # struct Person { name: &'static str }
 /// #[system]
@@ -59,7 +59,7 @@ use syn::{
 /// `#[write_component]` attributes.
 ///
 /// ```ignore
-/// # use legion_codegen::system;
+/// # use kaige_codegen::system;
 /// # use legion::{Schedule, world::SubWorld, Read, Write, IntoQuery};
 /// # struct Time;
 /// #[system]
@@ -76,7 +76,7 @@ use syn::{
 /// Systems can declare queries. The above can also be written as:
 ///
 /// ```ignore
-/// # use legion_codegen::system;
+/// # use kaige_codegen::system;
 /// # use legion::{Schedule, world::SubWorld, Read, Write, IntoQuery, Query};
 /// # struct Time;
 /// #[system]
@@ -93,7 +93,7 @@ use syn::{
 /// request the entity ID via a `&Entity` parameter.
 ///
 /// ```ignore
-/// # use legion_codegen::system;
+/// # use kaige_codegen::system;
 /// # struct Position { x: f32 }
 /// # struct Velocity { x: f32 }
 /// # struct Time { seconds: f32 }
@@ -107,7 +107,7 @@ use syn::{
 /// `#[filter]` attribute.
 ///
 /// ```ignore
-/// # use legion_codegen::system;
+/// # use kaige_codegen::system;
 /// # use legion::maybe_changed;
 /// # struct Position { x: f32 }
 /// # struct Velocity { x: f32 }
@@ -123,7 +123,7 @@ use syn::{
 /// your function. This state will be initialized when you construct the system.
 ///
 /// ```ignore
-/// # use legion_codegen::system;
+/// # use kaige_codegen::system;
 /// # use legion::Schedule;
 /// #[system]
 /// fn stateful(#[state] counter: &mut usize) {
@@ -140,7 +140,7 @@ use syn::{
 /// Systems can contain generic parameters.
 ///
 /// ```ignore
-/// # use legion_codegen::system;
+/// # use kaige_codegen::system;
 /// # use legion::{storage::Component, Schedule};
 /// # use std::fmt::Debug;
 /// # #[derive(Debug)]
