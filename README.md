@@ -21,9 +21,9 @@ KaiGE is a modern and versatile game engine written in Rust, designed to empower
 
 - [x] **Entity-Component System (ECS):** Utilize the entity-component system for efficient and scalable game architecture, allowing you to build complex game entities with ease.
 
-- [ ] **Cross-Platform:** KaiGE supports multiple platforms, including Windows, macOS, and Linux, ensuring your game can reach a wide audience.
+- [x] **Cross-Platform:** KaiGE supports multiple platforms, including Windows, macOS, and Linux, ensuring your game can reach a wide audience.
 
-- [ ] **Modern Graphics:** Harness the power of modern graphics APIs like Vulkan or OpenGL for stunning visuals and smooth rendering.
+- [ ] **Modern Graphics:** Harness the power of modern graphics APIs like Vulkan by using wgpu for stunning visuals and smooth rendering.
 
 - [ ] **2D and 3D Support:** KaiGE provides support for both 2D and 3D game development, giving you the flexibility to create the game you envision.
 
@@ -31,7 +31,7 @@ KaiGE is a modern and versatile game engine written in Rust, designed to empower
 
 - [ ] **Community Driven:** Despite KaiGE being open-source, KaiGE also hosts a list of community assets and plugins at [https://kaige.rs/assets](https://kaige.rs/assets).
 
-- [ ] **Editor:** KaiGE has an extensible editor that takes heavy inspiration from [Godot](https://github.com/godotengine/godot).
+- [ ] **Editor:** KaiGE has an extensible editor that takes inspiration from [Godot](https://github.com/godotengine/godot).
 
 ## Getting Started
 

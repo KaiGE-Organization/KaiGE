@@ -1,9 +1,18 @@
 [package]
 name = "kaige_renderer"
-version = "0.1.0"
+version = "0.0.1"
 edition = "2021"
+repository = "https://github.com/KaiGE-Organization/kaige_renderer"
+description = "2D and 3D renderer made for KaiGE, but is usable in other cases."
+readme = "README.md"
+authors = ["Kaige Organization <tylerdarincritchlow@gmail.com>"]
+license-file = "LICENSE"
+homepage = "https://kaige.rs/renderer"
+documentation = "https://kaige.rs/docs"
+keywords = ["game", "engine", "rust", "kaige"]
+categories = ["game-engines", "game-development", "rust"]
+exclude = ["target"]
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [lib]
 crate-type = ["cdylib", "rlib"]
