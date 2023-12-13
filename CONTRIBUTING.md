@@ -40,9 +40,9 @@ Please follow these guidelines when contributing:
 
 Please follow the project's code style guidelines. This includes:
 
-- Indentation style
-- Naming conventions
-- Commenting guidelines
+- Consistent indentation
+- Descriptive naming conventions (make the names make sense)
+- Descriptive commenting
 
 ## Bug Reports
 
@@ -71,8 +71,8 @@ We welcome pull requests! Please follow these guidelines when submitting a pull 
 
 ## License
 
-By contributing to this project, you agree that your contributions will be licensed under the [LICENSE](LICENSE) of this project.
+By contributing to this project, you agree that your contributions will be licensed under this project's [LICENSE](LICENSE).
 
 ---
 
-We appreciate your contributions and look forward to your involvement in making this project better!
+We appreciate your contributions and look forward to your involvement in improving this project!
