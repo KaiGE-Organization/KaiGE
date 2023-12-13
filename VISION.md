@@ -4,18 +4,18 @@ KaiGE aspires to establish itself as a premier Rust game engine, distinguished b
 
 ## Table Of Contents
 
-- [Core Features](##core-features)
-  - [Ease of Use](###ease-of-use)
-  - [Performance](###performance)
-  - [Flexibility](###flexibility)
-  - [Modern Design](###modern-design)
+- [Core Features](#core-features)
+  - [Ease of Use](#ease-of-use)
+  - [Performance](#performance)
+  - [Flexibility](#flexibility)
+  - [Modern Design](#modern-design)
  
-- [Additional Differentiators](##additional-differentiators)
-  - [Unique Features](###unique-features)
-  - [Genre-specific Focus](###genre-specific-focus)
-  - [Exceptional Community Support](###exceptional-community-support)
-  - [Active Development and Continuous Improvement](###active-development-and-continuous-improvement)
-  - [Physics, Collision, and Others](###TODO)
+- [Additional Differentiators](#additional-differentiators)
+  - [Unique Features](#unique-features)
+  - [Genre-specific Focus](#genre-specific-focus)
+  - [Exceptional Community Support](#exceptional-community-support)
+  - [Active Development and Continuous Improvement](#active-development-and-continuous-improvement)
+  - [Physics, Collision, and Others](#physics-collision-and-others)
 
 ## Core Features:
 
@@ -70,7 +70,7 @@ KaiGE aspires to establish itself as a premier Rust game engine, distinguished b
 
 - **Advanced Editor:**
   - Provide a powerful and user-friendly game development editor with visual scripting, scene management, and debugging features.
-  - UI made with [Azul](https://github.com/fschutt/azul)
+  - UI made with [egui](https://github.com/emilk/egui) or [imgui-rs](https://github.com/imgui-rs/imgui-rs).
 
 - **Procedural Content Generation:**
   - Integrate tools for generating dynamic and procedural game content, empowering developers to create diverse and engaging worlds.
@@ -82,7 +82,7 @@ KaiGE aspires to establish itself as a premier Rust game engine, distinguished b
    - Use the CLI tool to initialize template projects, build your games for each platform, and publish plugins and assets to the asset store.
 
  - **VR/AR Support:**
-   -  Optional crate/plugin that has tooling for build a VR or AR application or game.
+   -  Optional crate/plugin with tooling for building a VR or AR application or game.
   
 ### Genre-specific Focus:
 
