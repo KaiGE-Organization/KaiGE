@@ -6,6 +6,11 @@
     <img src="KaiGElogo.svg" width="240px" alt="KaiGE logo">
   </a>
 </p>
+<div align="center">
+  <img alt="Crates.io" src="https://img.shields.io/crates/d/kaige?style=plastic"> <img alt="Discord" src="https://img.shields.io/discord/000000000000?style=plastic&logo=discord&logoColor=white&labelColor=black&color=black"> <img alt="docs.rs (with version)" src="https://img.shields.io/docsrs/kaige/*?style=plastic&logo=rust&logoColor=white"> <img alt="Website" src="https://img.shields.io/website?url=https%3A%2F%2Fkaige.rs&style=plastic">
+
+</div>
+
 
 > [!WARNING]
 > KaiGE is nowhere near a finished product and in it's current state, it doesn't function as a game engine. The site is not up yet, so links will <ins>NOT</ins> work.
